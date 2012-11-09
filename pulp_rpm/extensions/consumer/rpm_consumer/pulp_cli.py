@@ -75,7 +75,7 @@ class UnbindCommand(PulpCliCommand):
         self.context = context
         self.prompt = context.prompt
         self.add_option(PulpCliOption('--repo-id', 'repository id', required=True))
-        self.add_option(PulpCliFlag('--force', 'delete the binding immediately and discontinue tracking consumer actions'))
+        self.add_option(PulpCliFlag('--force', _('delete the binding immediately and discontinue tracking consumer actions')))
 
     def unbind(self, **kwargs):
         consumer_id = load_consumer_id(self.context)
